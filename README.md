@@ -1,5 +1,3 @@
-# <img src="https://github.com/Jerrica1/AirBnB_clone/blob/master/dev/HBTN-hbnb-Final.png" width="160" height=auto /> AirBnB Clone
-
 ## Description
 
 Project attempts to clone the the AirBnB application and website, including the database, storage, RESTful API, Web Framework, and Front End.
