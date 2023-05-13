@@ -1,17 +1,21 @@
-#!/usr/bin/python3
-"""The `amenity` module
+#!/usr/bin/python
+""" holds class Amenity"""
+import models
+from models.base_model import BaseModel, Base
+from os import getenv
+import sqlalchemy
+from sqlalchemy import Column, String
+from sqlalchemy.orm import relationship
 
-It defines one class, `Amenity(),
-which sub-classes the `BaseModel()` class.`
-"""
-from models.base_model import BaseModel
 
+class Amenity(BaseModel, Base):
+    """Representation of Amenity """
+    if models.storage_t == 'db':
+        __tablename__ = 'amenities'
+        name = Column(String(128), nullable=False)
+    else:
+        name = ""
 
-class Amenity(BaseModel):
-    """An amenity provided by a place/house.
-
-    Attributes:
-        name
-    """
-
-    name = ""
+    def __init__(self, *args, **kwargs):
+        """initializes Amenity"""
+        super().__init__(*args, **kwargs)
