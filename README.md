@@ -6,8 +6,6 @@ Project attempts to clone the the AirBnB application and website, including the 
 * __python version:__ Python 3.4.3
 * __style:__ PEP 8 (v. 1.7.0)
 
-<img src="https://github.com/johncoleman83/AirBnB_clone/blob/master/dev/hbnb_step5.png" />
-
 ## Testing
 
 This project uses python library, `unittest` to run tests on all python files.  All unittests are in the `./tests` directory with the command:
