@@ -1,3 +1,6 @@
+# The AirBnB Clone Project
+![This is an Image](https://cdn.freebiesupply.com/logos/large/2x/airbnb-2-logo-png-transparent.png)
+
 ## Description
 
 Project attempts to clone the the AirBnB application and website, including the database, storage, RESTful API, Web Framework, and Front End.
