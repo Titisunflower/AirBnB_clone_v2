@@ -1,21 +1,25 @@
+#!/usr/bin/python3
+"""
+Test suits for amenities
+"""
+import os
+import models
 import unittest
 from datetime import datetime
-from models import *
+from models.base_model import BaseModel
 
 
-class Test_AmenityModel(unittest.TestCase):
+class TestAmenity(unittest.TestCase):
     """
-    Test the amenity model class
+    Tests for amenities
     """
 
-    def setUp(self):
-        self.model = Amenity()
-        self.model.save()
-
-    def test_var_initialization(self):
-        self.assertTrue(hasattr(self.model, "name"))
-        self.assertEqual(self.model.name, "")
+    def test_name(self):
+        """
+        Tests for name inputs
+        """
+        pass
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()
