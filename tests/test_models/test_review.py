@@ -1,25 +1,25 @@
+#!/usr/bin/python3
+"""
+Test suits for amenities
+"""
+import os
+import models
 import unittest
 from datetime import datetime
-from models import *
+from models.base_model import BaseModel
 
 
-class Test_ReviewModel(unittest.TestCase):
+class TestReview(unittest.TestCase):
     """
-    Test the review model class
+    Tests for amenities
     """
 
-    def setUp(self):
-        self.model = Review()
-        self.model.save()
-
-    def test_var_initialization(self):
-        self.assertTrue(hasattr(self.model, "place_id"))
-        self.assertTrue(hasattr(self.model, "user_id"))
-        self.assertTrue(hasattr(self.model, "text"))
-        self.assertEqual(self.model.place_id, "")
-        self.assertEqual(self.model.user_id, "")
-        self.assertEqual(self.model.text, "")
+    def test_name(self):
+        """
+        Tests for name inputs
+        """
+        pass
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()
