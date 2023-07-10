@@ -1,19 +1,16 @@
 #!/usr/bin/python3
 """Python module to compress all web static files"""
-from fabric.api import local, task
-from datetime import datetime
+from fabric.api import local
+from time import strftime
 
-@task
+
 def do_pack():
-    """Generates a .tgz archive from the contents of the web_static folder."""
-    now = datetime.now()
-    timestamp = now.strftime("%Y%m%d%H%M%S")
-    archive_path = "versions/web_static_{}.tgz".format(timestamp)
+    """A function that generates .tgz archive from contents of web_static"""
 
-    local("mkdir -p versions")
-    result = local("tar -czvf {} web_static".format(archive_path), capture=True)
-
-    if result.succeeded:
-        return archive_path
-    else:
+    name = strftime('%Y%m%d%H%M%S')
+    try:
+        local("mkdir -p versions")
+        local("tar -czvf versions/web_static_{}.tgz web_static".format(name))
+        return ("versions/web_static_{}.tgz".format(name))
+    except Exception:
         return None
